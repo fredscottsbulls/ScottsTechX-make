@@ -1,67 +1,52 @@
-# ScottsTechX-make
+# 🔧 ScottsTechX Make
 
-⚙️ DevOps Tool | Part of ScottsTechX Tool Suite
+<p align="center">
+  <img src="https://img.shields.io/badge/Make-Build-Automation-00ff88?style=for-the-badge&logo=gnu&logoColor=black" alt="Make"/>
+  <img src="https://img.shields.io/badge/Open-Source-00ff88?style=for-the-badge&logo=github&logoColor=black" alt="Open Source"/>
+</p>
 
----
-
-## About
-
-**Build automation - compile code, manage dependencies**
-
-Official ScottsTechX tool repo — part of the [ScottsTechX Tool Installer](https://github.com/fredscottsbulls/ScottsTechX-Tool-Installer) suite.
-
-**Official Website:** https://www.gnu.org/software/make/
+> **Build automation — compile code, manage dependencies, automate workflows.**
 
 ---
 
-## Quick Install
+## ⚡ What It Does
 
-### Via ScottsTechX Tool Installer:
+Make automates build processes — compile source code, manage dependencies, run tests, and orchestrate multi-step workflows from a simple Makefile.
+
+## 🚀 Quick Usage
 
 ```bash
-scotts-techx install make
+# Run default target
+make
+
+# Run specific target
+make build
+
+# Clean build artifacts
+make clean
+
+# Show all targets
+make help
+
+# Run in parallel
+make -j4
 ```
 
-### Manual Install:
+## 📁 Makefile Example
 
-```bash
-# Linux/macOS/Git Bash
-curl -fsSL https://raw.githubusercontent.com/fredscottsbulls/ScottsTechX-make/main/install.sh | bash
+```makefile
+build:
+	gcc -o app main.c -Wall
 
-# Windows PowerShell
-irm https://raw.githubusercontent.com/fredscottsbulls/ScottsTechX-make/main/install.ps1 | iex
+test:
+	./app --test
+
+clean:
+	rm -f app *.o
+
+.PHONY: build test clean
 ```
 
 ---
 
-## What is MAKE?
-
-Build automation - compile code, manage dependencies.
-
-For full documentation: https://www.gnu.org/software/make/
-
----
-
-## ScottsTechX Tool Suite (30 tools)
-
-| Category | Tools |
-|----------|-------|
-| Simple CLI | nmap, curl, wget, jq, git, python3, ffmpeg, traceroute, netcat, openssh |
-| Pentesting | hydra, sqlmap, nikto, hashcat, gobuster, searchsploit, masscan, burpsuite, ncat, Responder |
-| DevOps | docker, vim, htop, tmux, tar, make, openssl, ansible, kubectl, terraform |
-
-**[View Full Suite](https://github.com/fredscottsbulls/ScottsTechX-Tool-Installer)**
-
----
-
-## Disclaimer
-
-**For authorized use only.** Unauthorized access to computer systems is illegal.
-
----
-
-<div align="center">
-
-**ScottsTechX** | Fred Scotts | https://github.com/fredscottsbulls
-
-</div>
+MIT © 2026
